@@ -1,9 +1,10 @@
 {
-  "name": "maleja-API",
+  "name": "maleja-endpoint",
   "version": "0.0.0",
   "description": "Vivacity Tech Exercise",
   "scripts": {
-    "start": "TS_NODE_FILES=true NODE_ENV=development nodemon ./src/index.ts"
+    "start": "TS_NODE_FILES=true NODE_ENV=development nodemon ./src/index.ts",
+    "tslint": "tslint --project tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "@types/nodemon": "^1.19.1",
     "nodemon": "^2.0.15",
     "ts-node": "^10.7.0",
+    "tslint": "^6.1.3",
     "typescript": "^4.6.3"
   }
 }
