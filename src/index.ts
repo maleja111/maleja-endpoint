@@ -5,7 +5,7 @@ const port = '3000';
 
 app.get('/', (req: Request, res: Response) => {
   console.log('👉👉👉👉 Endpoint working');
-  res.send('👉👉👉👉 Endpoint working');
+  res.status(200).send('👉👉👉👉 Endpoint working');
 });
 
 app.listen(port, () => {
