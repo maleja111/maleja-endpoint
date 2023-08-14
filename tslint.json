@@ -85,6 +85,10 @@
         true,
         "parameters",
         "statements"
+      ],
+      "extends": [
+        "tslint:recommended",
+        "tslint-config-prettier"
       ]
     }
   }
