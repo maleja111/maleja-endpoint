@@ -5,6 +5,12 @@
 /.vscode
 /.dist
 
+# env variables
+/.env
+
+# package
+/.package-lock.json
+
 
 # testing
 /coverage
