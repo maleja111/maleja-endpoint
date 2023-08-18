@@ -12,7 +12,7 @@ app.post('/add', async (req: Request, res: Response) => {
     try {
         if (!isNotEmpty(req.body) && isDataValid(req.body)) {
             const result = await client.addNewUser(req.body);
-            res.status(201).json(`🙌 We successful created the user ID: ${result?.rows[0]?.id}`)
+            res.status(201).json(`🙌 We successfully created the user ID: ${result?.rows[0]?.id}`)
         } else {
           res.status(400).json({message: 'Error in the supplied data for user creation'})
         }
@@ -45,7 +45,7 @@ app.delete('/delete/:id', async (req: Request, res: Response) => {
     try {
         const id = parseInt(req?.params?.id);
         await client.deleteByID(id);
-        res.status(200).json(`🗑️ We successful deleted the user ID: ${id}`)
+        res.status(200).json(`🗑️ We successfully deleted the user ID: ${id}`)
     } catch(err: any) {
         res.status(404).json({message: err.message})
     }
@@ -56,7 +56,7 @@ app.put('/update/:id', async (req: Request, res: Response) => {
       if (!isNotEmpty(req.body) && isDataValid(req.body) && req?.params?.id) {
           const id = parseInt(req?.params?.id)
           await client.updateById(id, req.body);
-          res.status(201).json(`📋 We successful updated the user ID: ${id}`);
+          res.status(201).json(`📋 We successfully updated the user ID: ${id}`);
       } else {
             res.status(400).json({message: 'Error in the supplied data for user creation'})
       }
