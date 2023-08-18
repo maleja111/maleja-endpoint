@@ -8,6 +8,7 @@ const objectForValidation: UserValidation = {
     city: 'string',
     web: 'string'
 }
+
 const objectForCompare: { [x: string]: boolean; } = {
     name: true,
     email: true,

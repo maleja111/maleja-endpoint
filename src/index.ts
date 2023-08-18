@@ -8,7 +8,7 @@ const client = new DB();
 
 app.use(express.json());
 
-app.post('/add',async (req: Request, res: Response) => {
+app.post('/add', async (req: Request, res: Response) => {
     try {
         if (!isNotEmpty(req.body) && isDataValid(req.body)) {
             const result = await client.addNewUser(req.body);
@@ -58,10 +58,10 @@ app.put('/update/:id', async (req: Request, res: Response) => {
           await client.updateById(id, req.body);
           res.status(201).json(`📋 We successful updated the user ID: ${id}`);
       } else {
-        res.status(400).json({message: 'Error in the supplied data for user creation'})
+            res.status(400).json({message: 'Error in the supplied data for user creation'})
       }
   } catch(err: any) {
-      res.status(400).json({message: err.message})
+        res.status(400).json({message: err.message})
   }
 });
 
